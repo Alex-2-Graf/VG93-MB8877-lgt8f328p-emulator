@@ -67,7 +67,7 @@ Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controlle
   
 ## Инструкция по прошивке
 
-Для прошивки нам понадобится прогрямматор.  
+Для прошивки нам понадобится программатор.  
 Его можно изготовить из arduino [LarduinoISP](Programmer/LarduinoISP.zip)  
 Либо из RP2040 [LarduinoISP](Programmer/RP2040_HRDY_LarduinoISP_Prog.zip)  
   
