@@ -1,6 +1,6 @@
 # VG93-MB8877-lgt8f328p-emulator
 Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controller emulator based on LGT8F328P MCU.
-
+---
 # Эмулятор контроллера дисковода КР1818ВГ93 (MB8877/WD1793) на чипе LGT8F328P MCU
 
 Проект аппаратного эмулятора советской микросхемы КР1818ВГ93 (и её зарубежного аналога FD1793 / MB8877) на базе доступного и быстрого микроконтроллера LGT8F328P. 
@@ -24,11 +24,59 @@ Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controlle
 - Точная эмуляция сигналов READY, INDEX, TRACK 00.
 
 ## 🔌 Аппаратная реализация (Hardware Details)
+  
+Было выпущено 3 ревизии эмулятора.
+  
+### 1 Первая ревизия (не рекомендуется для повторения)
+  
+[Схема](Export/ВГ93-LGT_v1.1.pdf) [Монтаж](Export/ВГ93-LGT_v1.1.html) [Gerber](Gerber/VG93-LGT_1.1_GERBER.zip)
+  
+  
+![](Foto/ВГ93-LGT_v1.1_1.png)  
+  
+![](Foto/ВГ93-LGT_v1.1_2.png)  
+  
+  
+### 2 Вторая ревизия (используются диоды)
+  
+[Схема](Export/ВГ93-LGT_v1.2.pdf) [Монтаж](Export/ВГ93-LGT_v1.2.html) [Gerber](Gerber/VG93-LGT_1.2_GERBER.zip)
+  
+  
+![](Foto/ВГ93-LGT_v1.2_2.png)  
+  
+  
+### 3 Третья ревизия (используется 74AHC1G08)
+  
+[Схема](Export/ВГ93-LGT_v1.3.pdf) [Монтаж](Export/ВГ93-LGT_v1.3.html)
+  
+Так как 74AHC1G08 можно найти в двух корпусах, то и платы 2
+  
+[Мелкий SC-70](Gerber/VG93-LGT_1.3_SC-70_GERBER.zip) и [Крупный SOT-23-5](Gerber/VG93-LGT_1.3r_SOT-23-5_GERBER.zip)
+  
+  
+![](Foto/ВГ93-LGT_v1.3_2.png)  
+  
+![](Foto/ВГ93-LGT.jpg)  
+  
+---  
+  
+## Инструкция по прошивке
 
+Для прошивки нам понадобится прогрямматор.
+Его можно изготовить из arduino [LarduinoISP](Programmer/LarduinoISP.zip)
+Либо из RP2040 [LarduinoISP](Programmer/RP2040_HRDY_LarduinoISP_Prog.zip)
 
-### Инструкция по прошивке
+Далее прошить при помощи [AVRDUDESS](Programmer/AVRDUDESS-2.18-portable.zip)  
+
+Прошивки [тут](Firmware)
+Новые прошивки можно найти в канале [ZX-FLOPPY](https://t.me/zx_floppy)
+
 ## 👥 Авторство и благодарности (Credits)
 
+Особая благодарность Евгению Угрюмову за проделанную работу [ZX-FLOPPY](https://t.me/zx_floppy).
+Александру UR4QBP за массу эксперементов. Его реализация проекта [тут](https://www.youtube.com/live/jW95_YxV7ts?si=LEU0tBd916IoQcGA)
+HRDY [Дмитрию](https://github.com/demyanenko-d) за реализацию программатора на базе RP2040
+  
 ## 📄 Лицензия
 Проект распространяется под лицензией MIT. Подробности в файле `LICENSE`.
 
