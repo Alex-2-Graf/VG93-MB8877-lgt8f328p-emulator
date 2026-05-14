@@ -52,12 +52,14 @@ Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controlle
   
 [Схема](Export/ВГ93-LGT_v1.3.pdf) [Монтаж](Export/ВГ93-LGT_v1.3.html)
   
-Так как 74AHC1G08 можно найти в двух корпусах, то и платы 2
+Так как 74AHC1G08 можно найти в двух корпусах, то и платы две
   
 [Мелкий SC-70](Gerber/VG93-LGT_1.3_SC-70_GERBER.zip) и [Крупный SOT-23-5](Gerber/VG93-LGT_1.3r_SOT-23-5_GERBER.zip)
   
   
 ![](Foto/ВГ93-LGT_v1.3_2.png)  
+
+![](Foto/ВГ93-LGT_v1.3_3.png)  
   
 ![](Foto/ВГ93-LGT.jpg)  
   
