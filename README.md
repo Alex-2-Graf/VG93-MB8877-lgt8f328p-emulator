@@ -74,11 +74,11 @@ Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controlle
 Далее прошить при помощи [AVRDUDESS](Programmer/AVRDUDESS-2.18-portable.zip)  
   
 Прошивки [тут](Firmware)  
-Новые прошивки можно найти в канале [ZX-FLOPPY](https://t.me/zx_floppy)  
+Новые прошивки можно найти в группе [ZX-FLOPPY](https://t.me/zx_floppy)  
   
 ## 👥 Авторство и благодарности (Credits)  
   
-Особая благодарность Евгению Угрюмову за проделанную работу [ZX-FLOPPY](https://t.me/zx_floppy).  
+Особая благодарность Евгению Угрюмову за проделанную работу в [ZX-FLOPPY](https://t.me/zx_floppy).  
 Александру UR4QBP за массу эксперементов. Его реализация проекта [тут](https://www.youtube.com/live/jW95_YxV7ts?si=LEU0tBd916IoQcGA)  
 HRDY [Дмитрию](https://github.com/demyanenko-d) за реализацию программатора на базе RP2040  
   
