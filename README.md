@@ -76,6 +76,14 @@ Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controlle
 Прошивки [тут](Firmware)  
 Новые прошивки можно найти в группе [ZX-FLOPPY](https://t.me/zx_floppy)  
   
+Исходные материалы [тут](Sources)  
+
+---
+  
+Для BDI по типу НЕМО необходимо сделать доработку на ла3, она нужна для коррекции CS  
+
+  
+  
 ## 👥 Авторство и благодарности (Credits)  
   
 Особая благодарность Евгению Угрюмову за проделанную работу в [ZX-FLOPPY](https://t.me/zx_floppy).  
