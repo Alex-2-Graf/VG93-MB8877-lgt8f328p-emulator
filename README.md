@@ -82,7 +82,7 @@ Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controlle
   
 Для BDI по типу НЕМО необходимо сделать доработку на ла3, она нужна для коррекции CS  
   
-![](Sources/CS_correction.PDF)
+Схема [тут](Sources/CS_correction.PDF)
   
 ---
   
