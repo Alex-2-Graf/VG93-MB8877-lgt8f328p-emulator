@@ -2,12 +2,12 @@
 
 ## Hardware layout for Evgeny Ugryumov's WD1793/MB8877/KR1818VG93 floppy disk controller emulator based on the LGT8F328P MCU.
 
-> [English](README.en.md) | [Русский](README.ru.md)
+> [English](README.en.md) | [Русский](README.md) 
 
 This project features a hardware emulator for the Soviet KR1818VG93 (КР1818ВГ93) floppy disk controller chip and its international equivalents, the **Western Digital WD1793** and **Fujitsu MB8877**. Powered by the fast and affordable **LGT8F328P** microcontroller, this adapter board acts as a direct drop-in replacement. It is designed to replace scarce, expensive, or faulty vintage FDC chips in retro-computers like the ZX Spectrum and other compatible 8-bit systems.
 
 *   **Firmware Development:** Evgeny Ugryumov (ZX-FLOPPY group).
-*   **PCB Layout & Hardware Design:** Alex-2-Graf.
+*   **PCB Layout & Hardware Design:** [Alex-2-Graf](https://github.com/Alex-2-Graf).
 
 The adapter board is routed specifically to plug directly into a standard 40-pin IC socket on the host computer board, requiring no permanent modifications to the vintage hardware.
 
@@ -34,18 +34,18 @@ The emulator has evolved through three distinct board layouts:
 
 ### Revision 1 (Not recommended for new builds)
 The initial prototype version. Included for historical log purposes.
-*   [Schematics](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Placement](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Gerber](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator)
+*   [Schematics](Export/ВГ93-LGT_v1.1.pdf) | [Placement](Export/ВГ93-LGT_v1.1.html) | [Gerber](Gerber/VG93-LGT_1.1_GERBER.zip)
 
 ### Revision 2 (Diode-based version)
 An improved layout utilizing discrete steering diodes to condition signals.
-*   [Schematics](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Placement](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Gerber](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator)
+*   [Schematics](Export/ВГ93-LGT_v1.2.pdf) | [Placement](Export/ВГ93-LGT_v1.2.html) | [Gerber](Gerber/VG93-LGT_1.2_GERBER.zip)
 
 ### Revision 3 (74AHC1G08 logic version - Recommended)
 The latest and most stable layout utilizing a tiny 74AHC1G08 AND-gate chip. Since this logic IC comes in two common SMD packages, two distinct PCB options are available:
 1.  **Ultra-compact layout** using the **SC-70** IC package package:
-    *   [Schematics](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Placement](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Gerber](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator)
+    *   [Schematics](Export/ВГ93-LGT_v1.3.pdf) | [Placement](hExport/ВГ93-LGT_v1.3.html) | [Gerber](Gerber/VG93-LGT_1.3_SC-70_GERBER.zipr)
 2.  **Standard layout** using the **SOT-23-5** IC package package:
-    *   [Schematics](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Placement](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) | [Gerber](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator)
+    *   [Schematics](Export/ВГ93-LGT_v1.3.pdf) | [Placement](Export/ВГ93-LGT_v1.3.html) | [Gerber](Gerber/VG93-LGT_1.3r_SOT-23-5_GERBER.zip)
 
 ***
 
@@ -54,18 +54,18 @@ The latest and most stable layout utilizing a tiny 74AHC1G08 AND-gate chip. Sinc
 To flash the compiled firmware onto the onboard LGT8F328P microcontroller, a specialized ISP programmer is required. 
 
 You can assemble your own programmer using one of these DIY options:
-1.  An **Arduino-based** programmer using [LarduinoISP](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator).
-2.  An **RP2040-based** programmer using [LarduinoISP](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator).
+1.  An **Arduino-based** programmer using [LarduinoISP](Programmer/LarduinoISP.zip).
+2.  An **RP2040-based** programmer using [LarduinoISP](Programmer/RP2040_HRDY_LarduinoISP_Prog.zip).
 
-Once your hardware programmer is verified, flash the precompiled binary `.hex` files using the **AVRDUDESS** GUI software tool.
+Once your hardware programmer is verified, flash the precompiled binary `.hex` files using the **[AVRDUDESS](Programmer/AVRDUDESS-2.18-portable.zip)** GUI software tool.
 
-*   **Firmware Binaries:** Available inside the [/Firmware](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) directory.
-*   **Latest Releases:** Updated software drops can be monitored directly in the **ZX-FLOPPY** community group.
-*   **Source Material:** Complete design files can be inspected in the [/Sources](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator) folder.
+*   **Firmware Binaries:** Available inside the [/Firmware](Firmware) directory.
+*   **Latest Releases:** Updated software drops can be monitored directly in the **[ZX-FLOPPY](https://t.me/zx_floppy)** community group.
+*   **Source Material:** Complete design files can be inspected in the [/Sources](Sources) folder.
 
 ### ⚠️ Interface Modification (Nemo-BDI Correction)
 For Beta Disk Interfaces utilizing the **Nemo-BDI** standard architecture, an external hardware patch is required to correct the chip select (`CS`) signal timing. This modification requires a standard **555LA3 / 74LS00** discrete NAND logic gate chip.
-*   [Modification Schematic](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator)
+*   [Modification Schematic](Sources/CS_correction.PDF)
 
 ***
 
