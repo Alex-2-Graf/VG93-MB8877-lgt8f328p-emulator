@@ -72,7 +72,7 @@ For Beta Disk Interfaces utilizing the **Nemo-BDI** standard architecture, an ex
 ## 👥 Credits & Acknowledgments
 
 *   **Evgeny Ugryumov** — Special thanks for his incredible work developing the firmware core inside the **ZX-FLOPPY** project.
-*   **Alexander (UR4QBP)** — For running extensive hardware testing, experiments, and optimizations. You can find his specific repository fork [here](https://github.com/Alex-2-Graf/VG93-MB8877-lgt8f328p-emulator).
+*   **Alexander (UR4QBP)** — For running extensive hardware testing, experiments, and optimizations.
 *   **HRDY (Dmitry)** — For developing the excellent RP2040-based hardware programmer design.
 
 ***
