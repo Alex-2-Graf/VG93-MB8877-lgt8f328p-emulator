@@ -67,7 +67,7 @@ Hardware layout for Evgeny Ugryumov's WD1793/MB8877/ВГ93 floppy disk controlle
   
 ### Четвёртая ревизия (коррекция CS)
 
-В четвёртую ревизию добавил коррекцию CS на 555ЛА3/74LS00 для работы в BDI по типу НЕМО.
+В четвёртую ревизию добавил коррекцию CS на 555ЛА3/74LS00 для работы в BDI по типу НЕМО.  
 Схема [тут](Sources/CS_correction.PDF)
 
 [Схема](Export/ВГ93-LGT_v1.4.pdf) [Монтаж](Export/ВГ93-LGT_v1.4.html)
